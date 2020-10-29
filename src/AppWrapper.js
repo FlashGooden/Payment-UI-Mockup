@@ -15,6 +15,16 @@ export default function AppWrapper() {
          >
             <Upgrade />
          </Box>
+         <Box
+            maxWidth='992px'
+            m="auto"
+            display="flex"
+            // justifyContent="center"
+            p={2}
+            backgroundColor="whiteAlpha.900"
+         >
+            <Upgrade />
+         </Box>
       </div>
    );
 }
