@@ -11,7 +11,7 @@ export default function Upgrade() {
          backgroundColor="blackAlpha.300"
       >
          <Box className="upgrade-wrapper" p={1}>
-            <Text fontWeight="bold" mb={2} mt={3}>
+            <Text fontWeight="bold" mb={2} mt={3} fontSize={"lg"}>
                Upgrade your plan
             </Text>
             <Text textAlign="left" fontSize="xs" pr={20}>
@@ -25,7 +25,13 @@ export default function Upgrade() {
                mb={5}
                p={0}
             >
-               <Flex justifyContent="flex-start">
+               <Flex
+                  border="2px solid blue"
+                  borderRadius="3px"
+                  justifyContent="flex-start"
+                  p={5}
+                  backgroundColor="messenger.50"
+               >
                   <Box p={3} flexBasis="20%" mr={2} borderRadius="3px">
                      <Icon name="copy" />
                   </Box>
@@ -42,14 +48,18 @@ export default function Upgrade() {
                      justifyContent="flex-end"
                      alignItems="center"
                   >
-                     <Text as='sup' mr={1}>$ </Text>
-                     <Text fontSize='2.0rem'> 8,350 </Text>
-                     <Text as='sub' ml={1}>/ year</Text>
+                     <Text as="sup" mr={1}>
+                        ${" "}
+                     </Text>
+                     <Text fontSize="2.0rem"> 8,350 </Text>
+                     <Text as="sub" ml={1} pt={2}>
+                        / year
+                     </Text>
                   </Box>
                </Flex>
             </Box>
             <Box className="payment-details" mb={5} p={0}>
-               <Text mb={3} fontWeight="bold" fontSize="md" >
+               <Text mb={3} fontWeight="bold" fontSize="md">
                   Payment details
                </Text>
                <Box className="card-container" p={0}>
@@ -84,7 +94,7 @@ export default function Upgrade() {
                            placeholder="CVC"
                            className="card-id"
                            pl={1}
-                           borderRadius='3px'
+                           borderRadius="3px"
                         />
                      </Flex>
                   </Flex>
@@ -119,11 +129,19 @@ export default function Upgrade() {
                            placeholder="CVC"
                            className="card-id"
                            pl={1}
-                           borderRadius='3px'
+                           borderRadius="3px"
                         />
                      </Flex>
                   </Flex>
-                  <Text fontSize="xs" mb={10}>ADD PAYMENT METHOD</Text>
+                  <Text
+                     fontSize="xs"
+                     mb={10}
+                     color="messenger.600"
+                     fontWeight="bold"
+                     letterSpacing={2}
+                  >
+                     ADD PAYMENT METHOD
+                  </Text>
                </Box>
             </Box>
             <Box className="email-form" mb={5} p={1}>
@@ -132,7 +150,7 @@ export default function Upgrade() {
             <Button
                width="full"
                color="whiteAlpha.900"
-               backgroundColor="messenger.600"
+               backgroundColor="messenger.500"
                size="lg"
                variant="outline"
                p={8}

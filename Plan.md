@@ -9,14 +9,16 @@
   - payment details section
   - add payment method form
   - proceed button
+  - box shadows
 
 ## profile card component 
   - circular profile picture
   - name and locatoin text
   - level description
   - profile stats [followers, projects, rank]
-
+  - box shadows
 ## pricing meter component 
   - set pricing heading and text
   - hourly or fixed buttons
   - payment text and slider
+  - box shadows
