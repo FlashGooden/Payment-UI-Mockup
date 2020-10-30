@@ -7,10 +7,11 @@ export default function Upgrade() {
          width="lg"
          className="upgrade-container"
          borderRadius="10px"
-         p={3}
+         p={5}
          backgroundColor="whiteAlpha.900"
          mt={5}
         mb={5}
+        boxShadow='0px 21px 6px -16px #C0C0C0'
 
       >
          <Box className="upgrade-wrapper" p={1}>
@@ -33,8 +34,8 @@ export default function Upgrade() {
                   borderRadius="3px"
                   justifyContent="flex-start"
                   p={5}
-                  backgroundColor="messenger.50"
-               >
+                  backgroundColor="rgb(239,242,254)"
+                  >
                   <Box p={3} flexBasis="20%" mr={2} borderRadius="3px">
                      <Icon name="copy" />
                   </Box>
@@ -42,7 +43,11 @@ export default function Upgrade() {
                      <Text fontSize="md" fontWeight="bold">
                         Small Business
                      </Text>
-                     <Text fontSize="xs">CHANGE PLAN</Text>
+                     <Text fontSize="xs"  
+                     color="messenger.500"
+                     fontWeight="bold"
+                     mt={2}
+                     letterSpacing={1}>CHANGE PLAN</Text>
                   </Box>
                   <Box
                      flexBasis="40%"

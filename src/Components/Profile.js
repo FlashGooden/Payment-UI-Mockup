@@ -5,7 +5,7 @@ export default function Profile() {
    return (
       <Box
          height="50%"
-         width="90%"
+         width="85%"
          borderRadius="10px"
          p={1}
          display="flex"
@@ -14,6 +14,7 @@ export default function Profile() {
          pb={6}
          className="profile-card-container"
          backgroundColor='whiteAlpha.900'
+         boxShadow='0px 21px 6px -16px #C0C0C0'
       >
          <Box
             height="25%"

@@ -14,12 +14,14 @@ export default function Pricing() {
    return (
       <Box
          height="45%"
-         width="90%"
+         width="85%"
          borderRadius="10px"
          backgroundColor="whiteAlpha.900"
          className="pricing-container"
          p={3}
          pl={8}
+         pr={8}
+         boxShadow='0px 21px 6px -16px #C0C0C0'
       >
          <Text
             fontWeight="bold"
@@ -41,7 +43,7 @@ export default function Pricing() {
             of your pricing.
          </Text>
          <Flex
-            justifyContent="center"
+            justifyContent="space-between"
             alignItems="space-between"
             // p={1}
             className="price-rate-container"
@@ -52,35 +54,43 @@ export default function Pricing() {
             <Box
                border="1px solid blue"
                borderRadius="7px"
-               backgroundColor="messenger.50"
+               backgroundColor="rgb(239,242,254)"
                flexBasis="45%"
                display="flex"
-               justifyContent="space-around"
+               justifyContent="center"
                className="hourly-price"
                py={3}
-               m={3}
+               //  m={3}
             >
                <Icon name="copy" />
-               <Text fontWeight='bold' fontSize='sm'>Hourly</Text>
+               <Text fontWeight="bold" fontSize="sm">
+                  Hourly
+               </Text>
             </Box>
             <Box
                alignItems="stretch"
                border="1px solid blue"
                borderRadius="7px"
-               backgroundColor="messenger.50"
+               backgroundColor="rgb(239,242,254)"
                flexBasis="45%"
                display="flex"
-               justifyContent="space-around"
+               justifyContent="center"
                className="hourly-price"
                py={3}
-               m={3}
+               //  m={3}
             >
                <Icon name="copy" />
                <Text>Fixed</Text>
             </Box>
          </Flex>
-         <Box className="rate">
-            <Text>$ 180 / hour</Text>
+         <Box className="rate" display="flex" mt={5}>
+            <Text as="sup" mr={1} pt={5} color="gray.400" fontWeight="bold">
+               ${" "}
+            </Text>
+            <Text fontSize="1.5rem"> 180 </Text>
+            <Text as="sub" ml={1} pt={5} color="gray.400" fontWeight="bold">
+               / hour
+            </Text>
          </Box>
          <Box className="pricing-slider">
             <Slider color="blue" min="0" max="280" defaultValue={180}>
@@ -95,6 +105,10 @@ export default function Pricing() {
                   }}
                />
             </Slider>
+              <Flex justifyContent='space-between' mt={-3}>
+               <Text fontSize='xs' color='gray.400' fontWeight='bold' >$20</Text>
+               <Text fontSize='xs' color='gray.400' fontWeight='bold' >$300</Text>
+            </Flex>
          </Box>
       </Box>
    );
