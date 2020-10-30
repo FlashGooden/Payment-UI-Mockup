@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Flex, Icon, Input, Button } from "@chakra-ui/core";
+import { Box, Text, Flex, Input, Button } from "@chakra-ui/core";
 import { GiFishingBoat } from "react-icons/gi";
 import { GrVisa } from "react-icons/gr";
 import { RiMastercardFill } from "react-icons/ri";
@@ -42,7 +42,6 @@ export default function Upgrade() {
                >
                   <Box p={3} flexBasis="20%" mr={2} borderRadius="3px">
                      <Box
-                        // mb={10}
                         bottom="15px"
                         p={0}
                         as={GiFishingBoat}
@@ -105,13 +104,11 @@ export default function Upgrade() {
                            position="relative"
                         >
                            <Box
-                              // mb={10}
                               bottom="0px"
                               width="55px"
                               height="40px"
                               p={2}
                               as={RiMastercardFill}
-                              // size="30px"
                               color="rgb(255,192,50)"
                               position="absolute"
                               backgroundColor="gray.100"
@@ -154,19 +151,16 @@ export default function Upgrade() {
                            flexBasis="30%"
                            display="block"
                            mr={5}
-                           //  ml={-3}
                            className="card-image"
                            borderRadius="3px"
                            position="relative"
                         >
                            <Box
-                              // mb={10}
                               bottom="0px"
                               width="55px"
                               height="40px"
                               p={2}
                               as={GrVisa}
-                              // size="30px"
                               color="rgb(0,145,250)"
                               position="absolute"
                               backgroundColor="gray.100"
@@ -222,15 +216,11 @@ export default function Upgrade() {
             >
                Proceed to payment
                <Box
-                        // mb={10}
-                        // bottom="15px"
                         ml={4}
                         mt={1}
                         as={BsArrowRight}
                         size="20px"
                         color="white"
-                        // position="absolute"
-                        backgroundColor="messenger.500"
                         borderRadius={"3px"}
                      />
             </Button>

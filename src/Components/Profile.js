@@ -23,16 +23,6 @@ export default function Profile() {
             borderRadius='10px 10px 0px 0px'
             textAlign='center'
          >
-            {/* <Image
-               height="80px"
-               width="80px"
-               m="auto"
-               borderRadius="50%"
-               mt={8}
-               className="profile-image"
-               backgroundColor="gray.500"
-               opacity={1}
-            /> */}
             <Avatar src="https://bit.ly/broken-link"  height='80px' width='80px' mt={8} border='3px solid white'/>
          </Box>
          <Box

@@ -2,7 +2,6 @@ import { React, useState } from "react";
 import {
    Box,
    Text,
-   Icon,
    Flex,
    Slider,
    SliderTrack,
@@ -58,11 +57,8 @@ export default function Pricing() {
          <Flex
             justifyContent="space-between"
             alignItems="space-between"
-            // p={1}
             className="price-rate-container"
             mt={5}
-            // mx='auto'
-            // px={3}
          >
             <PseudoBox
                border={
@@ -79,7 +75,6 @@ export default function Pricing() {
                onClick={() => changeRate("Hourly")}
                _hover={{ cursor: "pointer" }}
                position="relative"
-               //  m={3}
             >
                <Box
                   mr={5}
@@ -105,7 +100,6 @@ export default function Pricing() {
                py={3}
                onClick={() => changeRate("Fixed")}
                _hover={{ cursor: "pointer" }}
-               //  m={3}
             >
                <Box
                   mr={5}

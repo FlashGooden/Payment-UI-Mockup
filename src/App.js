@@ -1,5 +1,4 @@
 
-import './App.css';
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import theme from './theme'
 import AppWrapper from './AppWrapper'
