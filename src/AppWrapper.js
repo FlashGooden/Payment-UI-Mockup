@@ -2,7 +2,7 @@ import React from "react";
 import Upgrade from "./Components/Upgrade";
 import Profile from './Components/Profile'
 import Pricing from './Components/Pricing'
-import { Box, Text, Image } from "@chakra-ui/core";
+import { Box, } from "@chakra-ui/core";
 
 export default function AppWrapper() {
    return (

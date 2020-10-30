@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
    Box,
    Text,
@@ -8,9 +8,23 @@ import {
    SliderTrack,
    SliderThumb,
    SliderFilledTrack,
+   PseudoBox,
 } from "@chakra-ui/core";
+import { GiAlarmClock } from "react-icons/gi";
+import { BsNewspaper } from "react-icons/bs";
 
 export default function Pricing() {
+   const [rate, setRate] = useState("Hourly");
+   const [price, setPrice] = useState(180);
+
+   const changeRate = (rate) => {
+      setRate(rate);
+   };
+
+   const sliderHandler = (e) => {
+      setPrice(parseInt(20) + e);
+   };
+
    return (
       <Box
          height="45%"
@@ -21,7 +35,7 @@ export default function Pricing() {
          p={3}
          pl={8}
          pr={8}
-         boxShadow='0px 21px 6px -16px #C0C0C0'
+         boxShadow="0px 21px 6px -16px #C0C0C0"
       >
          <Text
             fontWeight="bold"
@@ -36,7 +50,6 @@ export default function Pricing() {
             fontSize="xs"
             className="price-description"
             color="gray.400"
-            fontWeight="bold"
             pr={16}
          >
             Please set up your hourly or fixed rate so that the client is aware
@@ -51,49 +64,75 @@ export default function Pricing() {
             // mx='auto'
             // px={3}
          >
-            <Box
-               border="1px solid blue"
+            <PseudoBox
+               border={
+                  rate === "Hourly" ? "1px solid blue" : "1px solid #80808029"
+               }
+               backgroundColor={rate === "Hourly" ? "rgb(239,242,254)" : null}
                borderRadius="7px"
-               backgroundColor="rgb(239,242,254)"
                flexBasis="45%"
                display="flex"
                justifyContent="center"
+               alignItems="center"
                className="hourly-price"
                py={3}
+               onClick={() => changeRate("Hourly")}
+               _hover={{ cursor: "pointer" }}
+               position="relative"
                //  m={3}
             >
-               <Icon name="copy" />
-               <Text fontWeight="bold" fontSize="sm">
+               <Box
+                  mr={5}
+                  as={GiAlarmClock}
+                  size="25px"
+                  color="messenger.500"
+               />
+               <Text fontWeight="bold" fontSize="xs">
                   Hourly
                </Text>
-            </Box>
-            <Box
-               alignItems="stretch"
-               border="1px solid blue"
+            </PseudoBox>
+            <PseudoBox
+               border={
+                  rate === "Fixed" ? "1px solid blue" : "1px solid #80808029"
+               }
+               backgroundColor={rate === "Fixed" ? "rgb(239,242,254)" : null}
+               alignItems="center"
                borderRadius="7px"
-               backgroundColor="rgb(239,242,254)"
                flexBasis="45%"
                display="flex"
                justifyContent="center"
-               className="hourly-price"
+               className="fixed-price"
                py={3}
+               onClick={() => changeRate("Fixed")}
+               _hover={{ cursor: "pointer" }}
                //  m={3}
             >
-               <Icon name="copy" />
-               <Text>Fixed</Text>
-            </Box>
+               <Box
+                  mr={5}
+                  as={BsNewspaper}
+                  size="25px"
+                  color="messenger.500"
+               />
+               <Text fontWeight='bold' fontSize='xs'>Fixed</Text>
+            </PseudoBox>
          </Flex>
          <Box className="rate" display="flex" mt={5}>
             <Text as="sup" mr={1} pt={5} color="gray.400" fontWeight="bold">
                ${" "}
             </Text>
-            <Text fontSize="1.5rem"> 180 </Text>
+            <Text fontSize="1.5rem"> {price} </Text>
             <Text as="sub" ml={1} pt={5} color="gray.400" fontWeight="bold">
-               / hour
+               / {rate === "Hourly" ? "hour" : "fixed"}
             </Text>
          </Box>
          <Box className="pricing-slider">
-            <Slider color="blue" min="0" max="280" defaultValue={180}>
+            <Slider
+               color="blue"
+               min={0}
+               max={280}
+               defaultValue={180}
+               onChange={(e) => sliderHandler(e)}
+            >
                <SliderTrack />
                <SliderFilledTrack />
                <SliderThumb
@@ -105,9 +144,13 @@ export default function Pricing() {
                   }}
                />
             </Slider>
-              <Flex justifyContent='space-between' mt={-3}>
-               <Text fontSize='xs' color='gray.400' fontWeight='bold' >$20</Text>
-               <Text fontSize='xs' color='gray.400' fontWeight='bold' >$300</Text>
+            <Flex justifyContent="space-between" mt={-3}>
+               <Text fontSize="xs" color="gray.400" fontWeight="bold">
+                  $20
+               </Text>
+               <Text fontSize="xs" color="gray.400" fontWeight="bold">
+                  $300
+               </Text>
             </Flex>
          </Box>
       </Box>

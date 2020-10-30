@@ -1,5 +1,9 @@
 import React from "react";
 import { Box, Text, Flex, Icon, Input, Button } from "@chakra-ui/core";
+import { GiFishingBoat } from "react-icons/gi";
+import { GrVisa } from "react-icons/gr";
+import { RiMastercardFill } from "react-icons/ri";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Upgrade() {
    return (
@@ -10,15 +14,14 @@ export default function Upgrade() {
          p={5}
          backgroundColor="whiteAlpha.900"
          mt={5}
-        mb={5}
-        boxShadow='0px 21px 6px -16px #C0C0C0'
-
+         mb={5}
+         boxShadow="0px 21px 6px -16px #C0C0C0"
       >
          <Box className="upgrade-wrapper" p={1}>
             <Text fontWeight="bold" mb={2} mt={3} fontSize={"lg"}>
                Upgrade your plan
             </Text>
-            <Text textAlign="left" fontSize="xs" pr={20}>
+            <Text textAlign="left" fontSize="xs" pr={20} color="gray.400">
                Please make the payment to start enjoying all the features of our
                premium plan as soon as possible.
             </Text>
@@ -35,19 +38,34 @@ export default function Upgrade() {
                   justifyContent="flex-start"
                   p={5}
                   backgroundColor="rgb(239,242,254)"
-                  >
+                  position="relative"
+               >
                   <Box p={3} flexBasis="20%" mr={2} borderRadius="3px">
-                     <Icon name="copy" />
+                     <Box
+                        // mb={10}
+                        bottom="15px"
+                        p={0}
+                        as={GiFishingBoat}
+                        size="60px"
+                        color="white"
+                        position="absolute"
+                        backgroundColor="messenger.500"
+                        borderRadius={"3px"}
+                     />
                   </Box>
                   <Box flexBasis="30%" mr={8} p={0}>
                      <Text fontSize="md" fontWeight="bold">
                         Small Business
                      </Text>
-                     <Text fontSize="xs"  
-                     color="messenger.500"
-                     fontWeight="bold"
-                     mt={2}
-                     letterSpacing={1}>CHANGE PLAN</Text>
+                     <Text
+                        fontSize="xs"
+                        color="messenger.500"
+                        fontWeight="bold"
+                        mt={2}
+                        letterSpacing={1}
+                     >
+                        CHANGE PLAN
+                     </Text>
                   </Box>
                   <Box
                      flexBasis="40%"
@@ -82,17 +100,35 @@ export default function Upgrade() {
                            flexBasis="30%"
                            display="block"
                            mr={5}
-                           p={1}
                            className="card-image"
                            borderRadius="3px"
+                           position="relative"
                         >
-                           <Icon name="copy" />
+                           <Box
+                              // mb={10}
+                              bottom="0px"
+                              width="55px"
+                              height="40px"
+                              p={2}
+                              as={RiMastercardFill}
+                              // size="30px"
+                              color="rgb(255,192,50)"
+                              position="absolute"
+                              backgroundColor="gray.100"
+                              borderRadius={"3px"}
+                           />
                         </Box>
                         <Box flexBasis="80%" className="card-number" p={0}>
                            <Text fontWeight="bold" fontSize="sm">
                               Credit card
                            </Text>
-                           <Text fontSize="xs" color='gray.400' fontWeight='bold'>2344 xxxx xxxx 8880</Text>
+                           <Text
+                              fontSize="xs"
+                              color="gray.400"
+                              fontWeight="bold"
+                           >
+                              2344 xxxx xxxx 8880
+                           </Text>
                         </Box>
                      </Flex>
                      <Flex p={1} justifyContent="flex-end">
@@ -118,17 +154,36 @@ export default function Upgrade() {
                            flexBasis="30%"
                            display="block"
                            mr={5}
-                           p={1}
+                           //  ml={-3}
                            className="card-image"
                            borderRadius="3px"
+                           position="relative"
                         >
-                           <Icon name="copy" />
+                           <Box
+                              // mb={10}
+                              bottom="0px"
+                              width="55px"
+                              height="40px"
+                              p={2}
+                              as={GrVisa}
+                              // size="30px"
+                              color="rgb(0,145,250)"
+                              position="absolute"
+                              backgroundColor="gray.100"
+                              borderRadius={"3px"}
+                           />
                         </Box>
                         <Box flexBasis="80%" className="card-number" p={0}>
-                           <Text fontWeight="bold" fontSize="sm" >
+                           <Text fontWeight="bold" fontSize="sm">
                               Credit card
                            </Text>
-                           <Text fontSize="xs" color='gray.400' fontWeight='bold'>8890 xxxx xxxx 1234</Text>
+                           <Text
+                              fontSize="xs"
+                              color="gray.400"
+                              fontWeight="bold"
+                           >
+                              8890 xxxx xxxx 1234
+                           </Text>
                         </Box>
                      </Flex>
                      <Flex p={1} justifyContent="flex-end">
@@ -166,6 +221,18 @@ export default function Upgrade() {
                p={8}
             >
                Proceed to payment
+               <Box
+                        // mb={10}
+                        // bottom="15px"
+                        ml={4}
+                        mt={1}
+                        as={BsArrowRight}
+                        size="20px"
+                        color="white"
+                        // position="absolute"
+                        backgroundColor="messenger.500"
+                        borderRadius={"3px"}
+                     />
             </Button>
          </Box>
       </Box>
