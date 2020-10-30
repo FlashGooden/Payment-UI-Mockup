@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Text, Image } from "@chakra-ui/core";
+import { Box, Text, Avatar} from "@chakra-ui/core";
 
 export default function Profile() {
    return (
       <Box
-         height="55%"
+         height="50%"
          width="90%"
          borderRadius="10px"
          p={1}
@@ -13,16 +13,26 @@ export default function Profile() {
          justifyContent="space-between"
          pb={6}
          className="profile-card-container"
+         backgroundColor='whiteAlpha.900'
       >
-         <Box height="25%" className="profile-background">
-            <Image
+         <Box
+            height="25%"
+            className="profile-background"
+            backgroundColor="blackAlpha.500"
+            borderRadius='10px 10px 0px 0px'
+            textAlign='center'
+         >
+            {/* <Image
                height="80px"
                width="80px"
                m="auto"
                borderRadius="50%"
-               mt={3}
+               mt={8}
                className="profile-image"
-            />
+               backgroundColor="gray.500"
+               opacity={1}
+            /> */}
+            <Avatar src="https://bit.ly/broken-link"  height='80px' width='80px' mt={8} border='3px solid white'/>
          </Box>
          <Box
             display="flex"
@@ -31,7 +41,7 @@ export default function Profile() {
             alignItems="center"
             className="profile-info"
          >
-            <Text mt={6} fontWeight="bold">
+            <Text mt={2} fontWeight="bold">
                Filip Martin Jose
             </Text>
             <Text fontSize="xs" color="gray.400" fontWeight="bold">
@@ -39,7 +49,7 @@ export default function Profile() {
             </Text>
             <Text
                fontSize="xs"
-               backgroundColor="messenger.600"
+               backgroundColor="messenger.500"
                borderRadius="30px"
                color="whiteAlpha.900"
                width="25%"
@@ -58,6 +68,7 @@ export default function Profile() {
             justifyContent="space-around"
             alignItems="flex-start"
             p="auto"
+            ml={5}
             flexDirection="row"
             className="profile-stats"
          >

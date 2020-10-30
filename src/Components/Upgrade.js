@@ -8,7 +8,10 @@ export default function Upgrade() {
          className="upgrade-container"
          borderRadius="10px"
          p={3}
-         backgroundColor="blackAlpha.300"
+         backgroundColor="whiteAlpha.900"
+         mt={5}
+        mb={5}
+
       >
          <Box className="upgrade-wrapper" p={1}>
             <Text fontWeight="bold" mb={2} mt={3} fontSize={"lg"}>
@@ -26,7 +29,7 @@ export default function Upgrade() {
                p={0}
             >
                <Flex
-                  border="2px solid blue"
+                  border="1px solid blue"
                   borderRadius="3px"
                   justifyContent="flex-start"
                   p={5}
@@ -84,7 +87,7 @@ export default function Upgrade() {
                            <Text fontWeight="bold" fontSize="sm">
                               Credit card
                            </Text>
-                           <Text fontSize="xs">2344 xxxx xxxx 8880</Text>
+                           <Text fontSize="xs" color='gray.400' fontWeight='bold'>2344 xxxx xxxx 8880</Text>
                         </Box>
                      </Flex>
                      <Flex p={1} justifyContent="flex-end">
@@ -95,6 +98,7 @@ export default function Upgrade() {
                            className="card-id"
                            pl={1}
                            borderRadius="3px"
+                           fontWeight="bold"
                         />
                      </Flex>
                   </Flex>
@@ -116,10 +120,10 @@ export default function Upgrade() {
                            <Icon name="copy" />
                         </Box>
                         <Box flexBasis="80%" className="card-number" p={0}>
-                           <Text fontWeight="bold" fontSize="sm">
+                           <Text fontWeight="bold" fontSize="sm" >
                               Credit card
                            </Text>
-                           <Text fontSize="xs">8890 xxxx xxxx 1234</Text>
+                           <Text fontSize="xs" color='gray.400' fontWeight='bold'>8890 xxxx xxxx 1234</Text>
                         </Box>
                      </Flex>
                      <Flex p={1} justifyContent="flex-end">
@@ -130,13 +134,14 @@ export default function Upgrade() {
                            className="card-id"
                            pl={1}
                            borderRadius="3px"
+                           fontWeight="bold"
                         />
                      </Flex>
                   </Flex>
                   <Text
                      fontSize="xs"
                      mb={10}
-                     color="messenger.600"
+                     color="messenger.500"
                      fontWeight="bold"
                      letterSpacing={2}
                   >

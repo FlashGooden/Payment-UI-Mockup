@@ -1,30 +1,41 @@
 import React from "react";
 import Upgrade from "./Components/Upgrade";
-import { Box } from "@chakra-ui/core";
+import Profile from './Components/Profile'
+import Pricing from './Components/Pricing'
+import { Box, Text, Image } from "@chakra-ui/core";
 
 export default function AppWrapper() {
    return (
-      <div>
+
          <Box
-            width="45%"
-            m="auto"
+            width="992px"
             display="flex"
-            justifyContent="center"
+            justifyContent="space-between"
             p={2}
-            backgroundColor="whiteAlpha.900"
+            backgroundColor="rgba(226,231,242)"
+            pr={4}
+            className="ui-container"
+            m='auto'
          >
+          
             <Upgrade />
+            <Box
+        width="md"
+        mt={5}
+        mb={5}
+        p={0}
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-between"
+        alignItems="flex-end"
+        className='right-container'
+      >
+            <Profile />
+            <Pricing />
+      </Box>
+            
          </Box>
-         <Box
-            maxWidth='992px'
-            m="auto"
-            display="flex"
-            // justifyContent="center"
-            p={2}
-            backgroundColor="whiteAlpha.900"
-         >
-            <Upgrade />
-         </Box>
-      </div>
+        
+
    );
 }
